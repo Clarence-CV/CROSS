@@ -61,6 +61,36 @@
   </header>
 
   <main>
+    <section class="section teaser-section">
+      <div class="container">
+        <div class="section__tag">Teaser Figure</div>
+        <h2>Main Figure</h2>
+        <div class="teaser-card">
+          <div class="teaser-media">
+            <img
+              class="teaser-image"
+              src="assets/images/teaser.png"
+              alt="CROSS teaser figure"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            />
+            <div class="teaser-placeholder">
+              <div>
+                <div class="teaser-placeholder__title">Put your CROSS teaser figure here</div>
+                <p>
+                  Recommended content: remote sensing image, referring expression,
+                  segmentation masks, and a compact pipeline highlighting LGCD and PSCL.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="teaser-caption">
+            Overview of CROSS for Remote Sensing Referring Segmentation. Put your final figure at
+            <code>assets/images/teaser.png</code> and it will automatically appear here.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--highlight">
       <div class="container stats">
         <div class="stat-card">
@@ -69,11 +99,11 @@
         </div>
         <div class="stat-card">
           <div class="stat-card__label">Task</div>
-          <div class="stat-card__value">RS Referring Segmentation</div>
+          <div class="stat-card__value">RRSIS</div>
         </div>
         <div class="stat-card">
           <div class="stat-card__label">Core Idea</div>
-          <div class="stat-card__value">Distillation + Grounding</div>
+          <div class="stat-card__value">LGCD + PSCL</div>
         </div>
       </div>
     </section>
@@ -84,30 +114,28 @@
           <div class="section__tag">Abstract</div>
           <h2>Overview</h2>
           <p>
-            Remote sensing referring segmentation requires a model to identify
-            and segment a target region conditioned on natural language
-            expressions. The task is challenging because of large-scale scenes,
-            fine-grained object relations, sparse targets, and cross-modal
-            alignment difficulty.
+            Referring Remote Sensing Image Segmentation (RRSIS) has achieved significant progress through the integration of VLMs and the Segment Anything Model (SAM). However, this progress largely relies on strong pre-trained capabilities, while leaving two fundamental limitations insufficiently addressed: <em>(1) Architectural Weak-Coupling</em>, where the unidirectional flow forces reliance on coarse VLM prompts and wastes SAM's pixel-level structural guidance, causing localization drift; and <em>(2) Object-Centric Semantic Bias</em>, where models overemphasize dominant object semantics while remaining insensitive to spatial reasoning crucial for RRSIS.
           </p>
           <p>
-            CROSS introduces a cascaded distillation pipeline together with dual
-            constraints for grounding-aware representation learning, enabling
-            stronger language-region alignment and more reliable segmentation in
-            complex aerial imagery.
+            Motivated by these observations, we propose CROSS, a tightly integrated paradigm for RRSIS. First, we introduce Linguistic-Guided Cascaded Distillation (LGCD) to bridge the architectural gap, which distills SAM's geometric affinities as soft regularizers into VLM intermediate layers, injecting dense structural priors to refine localization. Second, Perspective-Spatial Contrastive Learning (PSCL) imposes cross-anchored constraints by mining mask-filtered deceptive distractors and spatial-linguistic counterfactuals as hard negatives, explicitly shattering semantic shortcuts to enforce genuine logical consistency.
+          </p>
+          <p>
+            Extensive experiments on RRSIS benchmarks demonstrate that CROSS achieves state-of-the-art performance and maintains precise localization even under severe spatial description perturbations, standing as a robust new paradigm for RRSIS.
           </p>
         </div>
 
         <div class="concept-card">
           <div class="concept-card__title">Method Sketch</div>
           <div class="pipeline">
-            <div class="pipeline__node">Image Encoder</div>
+            <div class="pipeline__node">Remote Sensing Image + Expression</div>
             <div class="pipeline__arrow">→</div>
-            <div class="pipeline__node">Cascaded Distillation</div>
+            <div class="pipeline__node">VLM + SAM Interaction</div>
             <div class="pipeline__arrow">→</div>
-            <div class="pipeline__node">Dual-Constraint Grounding</div>
+            <div class="pipeline__node">LGCD Structural Distillation</div>
             <div class="pipeline__arrow">→</div>
-            <div class="pipeline__node">Segmentation Output</div>
+            <div class="pipeline__node">PSCL Hard Negative Reasoning</div>
+            <div class="pipeline__arrow">→</div>
+            <div class="pipeline__node">Precise Referring Segmentation</div>
           </div>
         </div>
       </div>

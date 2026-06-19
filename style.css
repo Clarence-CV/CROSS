@@ -425,6 +425,86 @@ p {
   padding: 30px;
 }
 
+.teaser-section {
+  padding-bottom: 34px;
+}
+
+.teaser-card {
+  margin-top: 20px;
+}
+
+.teaser-media {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: var(--panel-strong);
+}
+
+.teaser-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 760px;
+  object-fit: contain;
+  background: #06141f;
+}
+
+.teaser-placeholder {
+  min-height: 420px;
+  display: none;
+  place-items: center;
+  text-align: center;
+  padding: 40px;
+  background:
+    linear-gradient(180deg, rgba(16, 54, 70, 0.6), rgba(7, 18, 28, 0.96)),
+    var(--panel-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.teaser-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(73, 198, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 198, 255, 0.09) 1px, transparent 1px),
+    radial-gradient(circle at 24% 28%, rgba(139, 247, 192, 0.2), transparent 16%),
+    radial-gradient(circle at 76% 62%, rgba(73, 198, 255, 0.2), transparent 18%);
+  background-size: 34px 34px, 34px 34px, auto, auto;
+  opacity: 0.95;
+}
+
+.teaser-placeholder > * {
+  position: relative;
+  z-index: 1;
+}
+
+.teaser-placeholder__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.teaser-placeholder p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #d8e8f5;
+}
+
+.teaser-caption {
+  margin-top: 16px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.teaser-caption code {
+  color: var(--accent);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
 .bibtex {
   padding: 22px 24px;
   overflow-x: auto;
