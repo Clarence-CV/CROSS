@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CROSS | ECCV 2026</title>
+  <meta
+    name="description"
+    content="CROSS: Cascaded Distillation and Dual-Constraint Grounding for Remote Sensing Referring Segmentation"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">CROSS</div>
+      <div class="venue">ECCV 2026</div>
+    </nav>
+
+    <div class="hero__content container">
+      <div class="hero__badge">Remote Sensing Referring Segmentation</div>
+      <h1>
+        CROSS: Cascaded Distillation and Dual-Constraint Grounding for
+        Remote Sensing Referring Segmentation
+      </h1>
+      <p class="hero__subtitle">
+        A project page for our ECCV 2026 paper on grounding-aware remote
+        sensing segmentation with a cascaded distillation framework.
+      </p>
+
+      <div class="authors">
+        <span>Tingzhang Luo</span>
+        <span>Ruizhong Liu</span>
+        <span>Yichao Liu</span>
+        <span>Cheng Fan</span>
+        <span>Yu Liu</span>
+        <span>Jianyuan Guo</span>
+      </div>
+
+      <div class="hero__links">
+        <a href="#" class="button button--primary">Paper</a>
+        <a href="#" class="button">Code</a>
+        <a href="#" class="button">Dataset</a>
+        <a href="#abstract" class="button">Abstract</a>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="orbit orbit--1"></div>
+      <div class="orbit orbit--2"></div>
+      <div class="satellite satellite--1"></div>
+      <div class="satellite satellite--2"></div>
+      <div class="earth-grid"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--highlight">
+      <div class="container stats">
+        <div class="stat-card">
+          <div class="stat-card__label">Venue</div>
+          <div class="stat-card__value">ECCV 2026</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__label">Task</div>
+          <div class="stat-card__value">RS Referring Segmentation</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__label">Core Idea</div>
+          <div class="stat-card__value">Distillation + Grounding</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract" class="section">
+      <div class="container grid-two">
+        <div>
+          <div class="section__tag">Abstract</div>
+          <h2>Overview</h2>
+          <p>
+            Remote sensing referring segmentation requires a model to identify
+            and segment a target region conditioned on natural language
+            expressions. The task is challenging because of large-scale scenes,
+            fine-grained object relations, sparse targets, and cross-modal
+            alignment difficulty.
+          </p>
+          <p>
+            CROSS introduces a cascaded distillation pipeline together with dual
+            constraints for grounding-aware representation learning, enabling
+            stronger language-region alignment and more reliable segmentation in
+            complex aerial imagery.
+          </p>
+        </div>
+
+        <div class="concept-card">
+          <div class="concept-card__title">Method Sketch</div>
+          <div class="pipeline">
+            <div class="pipeline__node">Image Encoder</div>
+            <div class="pipeline__arrow">→</div>
+            <div class="pipeline__node">Cascaded Distillation</div>
+            <div class="pipeline__arrow">→</div>
+            <div class="pipeline__node">Dual-Constraint Grounding</div>
+            <div class="pipeline__arrow">→</div>
+            <div class="pipeline__node">Segmentation Output</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section__tag">Highlights</div>
+        <h2>Why CROSS?</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Cascaded Distillation</h3>
+            <p>
+              Progressively transfers useful semantic and grounding knowledge to
+              improve cross-modal understanding in remote sensing scenes.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Dual Constraints</h3>
+            <p>
+              Enforces robust alignment between language expressions and
+              candidate regions from complementary perspectives.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Remote Sensing Ready</h3>
+            <p>
+              Designed for large-view, high-resolution, object-dense aerial and
+              satellite imagery.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__tag">Visual Theme</div>
+        <h2>Remote sensing inspired design</h2>
+        <div class="showcase">
+          <div class="showcase__panel map-panel">
+            <div class="map-grid"></div>
+            <div class="map-marker marker--a"></div>
+            <div class="map-marker marker--b"></div>
+            <div class="map-marker marker--c"></div>
+          </div>
+          <div class="showcase__text">
+            <p>
+              This page uses a satellite-style color palette, orbital lines,
+              map grid textures, and minimal project-page layout similar to the
+              reference style you mentioned.
+            </p>
+            <p>
+              Later you can replace the placeholder buttons with your real paper
+              PDF, code repository, benchmark links, method figure, and
+              qualitative examples.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section__tag">Citation</div>
+        <h2>BibTeX</h2>
+        <pre class="bibtex"><code>@inproceedings{luo2026cross,
+  title={CROSS: Cascaded Distillation and Dual-Constraint Grounding for Remote Sensing Referring Segmentation},
+  author={Luo, Tingzhang and Liu, Ruizhong and Liu, Yichao and Fan, Cheng and Liu, Yu and Guo, Jianyuan},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 CROSS Project</span>
+      <span>Built for GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>
